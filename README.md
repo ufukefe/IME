@@ -1,5 +1,5 @@
-# IME
-Image Matching Evaluation (IME) codes for our [ICCV 2021 TradiCV Workshop](https://sites.google.com/view/tradicv) paper: [*Effect of Parameter Optimization on Classical and Learning-based Image Matching Methods*](https://arxiv.org/pdf/2108.08179.pdf) 
+# Image Matching Evaluation (IME)
+Image Matching Evaluation codes for our [ICCV 2021 TradiCV Workshop](https://sites.google.com/view/tradicv) paper: [*Effect of Parameter Optimization on Classical and Learning-based Image Matching Methods*](https://arxiv.org/pdf/2108.08179.pdf) 
 
 Using the IME, you can test any feature matching algorithm on datasets containing ground-truth homographies. For this, you should create a wrapper for the algorithm to be tested. This wrapper should output the matched pixel positions between the two images using the selected algorithm.
 
