@@ -6,17 +6,17 @@ Using the IME, you can test any feature matching algorithm on datasets containin
 ## Currently Supported Algorithms
 
 **Classical** <br />
-*SIFT* <br />
-*SURF* <br />
-*ORB* <br />
-*KAZE* <br />
-*AKAZE* <br />
+SIFT <br />
+SURF <br />
+ORB <br />
+KAZE <br />
+AKAZE <br />
 
 **Learning-based** <br />
-*SuperPoint* <br />
-*SuperGlue* <br />
-*Patch2Pix* <br />
-*DFM* <br />
+SuperPoint <br />
+SuperGlue <br />
+Patch2Pix <br />
+DFM <br />
 
 ## Setup Environment
 This repository is created using Anaconda.
