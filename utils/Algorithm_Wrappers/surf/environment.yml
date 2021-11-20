@@ -1,0 +1,13 @@
+name: surf
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python==3.7.1
+  - pytorch==1.7.1
+  - torchvision==0.8.2
+  - cudatoolkit=11.0
+  - pip  
+  - pip:
+      - opencv-python==3.4.2.17
+      - opencv-contrib-python==3.4.2.17

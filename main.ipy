@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 21 13:57:24 2021
+
+@authors: kutalmisince and ufukefe
+"""
+
+import os
+from create_virtual_env import create_virtual_env
+from get_names import get_names
+
+
+# # Get Algorithm and dataset names
+algorithms, alg_directory, datasets, dataset_directory, result_directory = get_names()
+
+# RUN ALGORITHMS and SAVE OUTPUTS
+for i, alg in enumerate(algorithms):
+    
+    create_virtual_env(alg, alg_directory[alg])
+    
+    for dataset in datasets:
+        print(f'{alg} algorithm is running on {dataset} dataset')
+        out_dir = result_directory + '/' + dataset + '/' + alg
+        
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
+            
+        os.system('python3 ' + alg_directory[alg] + '/' + 'algorithm_wrapper.py' + ' --alg_name ' + alg +
+                  ' --alg_dir ' + alg_directory[alg] + ' --dataset_dir ' + dataset_directory[dataset] + 
+                  ' --output_dir ' + out_dir)
+    
+
+# PERFORMANCE MEASUREMENT
+for dataset in datasets:
+    if dataset == 'multi_modal':
+        os.system('python3 ' + dataset_directory[dataset] + '/' + 'eval_' + f'{dataset}.py' + ' --algorithms ' + " ".join(algorithms) +
+                  ' --dataset_name ' + dataset + ' --result_directory ' + result_directory + 
+                  ' --dataset_dir ' + dataset_directory[dataset])
+        
+    elif dataset == 'hpatches':
+        os.system('python3 ' + dataset_directory[dataset] + '/' + 'eval_' + f'{dataset}.py' + ' --algorithms ' + " ".join(algorithms) +
+                  ' --dataset_name ' + dataset + ' --result_directory ' + result_directory + 
+                  ' --dataset_dir ' + dataset_directory[dataset])
+    else:
+        print('please provide eval_dataset.py script as above')  
+      

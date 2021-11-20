@@ -1,0 +1,13 @@
+name: ime
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python==3.7.1
+  - numpy==1.19.2
+  - scipy==1.5.2
+  - pytorch==1.1.0
+  - pandas==1.1.5
+  - pillow==8.3.1
+  - pip:
+    - opencv-python==4.5.3.56

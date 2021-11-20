@@ -1,0 +1,11 @@
+name: orb
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.7.1
+  - pytorch==1.7.1
+  - torchvision==0.8.2
+  - cudatoolkit=11.0
+  - opencv==4.5.2
