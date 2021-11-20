@@ -1,0 +1,10 @@
+,0,1
+sift,82.1,0.9
+surf,80.0,0.9
+orb,48.0,1.0
+kaze,79.8,1.0
+akaze,72.0,1.0
+superpoint,82.6,1.0
+superglue,86.8,0.6
+patch2pix,84.1,0.9
+dfm,84.0,1.0
