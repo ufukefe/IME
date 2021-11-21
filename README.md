@@ -13,7 +13,7 @@ Using the IME, you can test any feature matching algorithm on datasets containin
 | KAZE      | DFM            |
 | AKAZE     |                |
     
-## Setup Environment
+## Environment Setup
 This repository is created using Anaconda.
 
 Open a terminal in the IME folder and run the following commands;
