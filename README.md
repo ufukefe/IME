@@ -1,7 +1,8 @@
 # Image Matching Evaluation (IME)
-Image Matching Evaluation codes for our [ICCV 2021 TradiCV Workshop](https://sites.google.com/view/tradicv) paper: [*Effect of Parameter Optimization on Classical and Learning-based Image Matching Methods*](https://arxiv.org/pdf/2108.08179.pdf) 
 
-Using the IME, you can test any feature matching algorithm on datasets containing ground-truth homographies. For this, you should create a wrapper for the algorithm to be tested. This wrapper should output the matched pixel positions between the two images using the selected algorithm.
+IME provides to test any feature matching algorithm on datasets containing ground-truth homographies. 
+
+Also, one can reproduce the results given in our paper [*Effect of Parameter Optimization on Classical and Learning-based Image Matching Methods*](https://openaccess.thecvf.com/content/ICCV2021W/TradiCV/papers/Efe_Effect_of_Parameter_Optimization_on_Classical_and_Learning-Based_Image_Matching_ICCVW_2021_paper.pdf) published in [ICCV 2021 TradiCV Workshop.](https://sites.google.com/view/tradicv) 
 
 ## Currently Supported Algorithms
 
@@ -47,11 +48,11 @@ by changing ratio_th (default = [0.9, 0.9, 0.9, 0.9, 0.95, 1.0]).
 
 2. Use get_names.py to select algorithms and datasets.
 
-3. You can put your own algorithm on Algorithm folder to evaluate with writing a wrapper with the same format.
+3. You can put your own algorithm on Algorithm folder to evaluate with creating a wrapper with the same format. This wrapper should output the matched pixel positions between two images using the selected algorithm.
 
-4. You can put your own dataset on Dataset folder to evaluate by arranging the proper format. Dataset should be in the form of Dataset/subset/subsubset/image1.png
+4. You can put your own dataset on Dataset folder to evaluate by arranging the proper format. Dataset should be in the form of Dataset/subset/subsubset/
 
-## Reproducing Results Given in the Paper
+## Reproducing Results Given in our Paper
 
 We provide the results given in our paper in ICCV_Results folder. To reproduce the results, you can run an experiment for a specific ratio test or confidence threshold and copy the results in the relevant ratio threshold folder in hpatches_classical or hpatches_deep folder. Then, you can run rt_fig.py and auc_fig.py scripts to save and view the figures.
 
