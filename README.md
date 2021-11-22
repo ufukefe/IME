@@ -56,6 +56,15 @@ by changing ratio_th (default = [0.9, 0.9, 0.9, 0.9, 0.95, 1.0]).
 
 We provide the results given in our paper in ICCV_Results folder. To reproduce the results, you can run an experiment for a specific ratio test or confidence threshold and copy the results in the relevant ratio threshold folder in hpatches_classical or hpatches_deep folder. Then, you can run rt_fig.py and auc_fig.py scripts to save and view the figures.
 
+## TODO
+Algorithms to be added:
+- [LoFTR](https://zju3dv.github.io/loftr/) ([LoFTR Kornia](https://kornia-tutorials.readthedocs.io/en/latest/image_matching.html))
+- [GFTTAffNetHardNet](https://kornia.readthedocs.io/en/latest/_modules/kornia/feature/integrated.html#LocalFeatureMatcher)
+
+Datasets to be added:
+- [Multi Modality Dataset](https://github.com/StaRainJ/Multi-modality-image-matching-database-metrics-methods)
+
+
 ## BibTeX Citation
 Please cite our paper if you use the code:
 
