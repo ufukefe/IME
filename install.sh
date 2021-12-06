@@ -20,8 +20,15 @@ cp utils/Algorithm_Wrappers/patch2pix/algorithm_wrapper.py Algorithms/patch2pix
 cp utils/Algorithm_Wrappers/patch2pix/algorithm_wrapper_util.py Algorithms/patch2pix
 
 cp utils/Algorithm_Wrappers/SuperPoint/algorithm_wrapper.py Algorithms/SuperPoint
-cp utils/Algorithm_Wrappers/SuperPoint/match_pairs_sp.py Algorithms/SuperPoint
+cp utils/Algorithm_Wrappers/SuperPoint/descriptors_sp.py Algorithms/SuperPoint
 cp utils/Algorithm_Wrappers/SuperPoint/environment.yml Algorithms/SuperPoint
+cd Algorithms/SuperPoint
+cp match_pairs.py match_pairs_sp.py
+sed -i -e '272,282d' match_pairs_sp.py
+sed -i '271r descriptors_sp.py' match_pairs_sp.py
+rm descriptors_sp.py
+cd ..
+cd ..
 
 cp utils/Algorithm_Wrappers/SuperGlue/algorithm_wrapper.py Algorithms/SuperGlue
 cp utils/Algorithm_Wrappers/SuperGlue/environment.yml Algorithms/SuperGlue
