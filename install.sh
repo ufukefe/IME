@@ -70,7 +70,7 @@ rm -rf i_contruction i_crownnight i_dc i_pencils i_whitebuilding v_artisans v_as
 cd ..
 
 # Organize HPatches for evaluation structure
-conda run -n im_eval python3 hpatches_organizer.py
+conda run -n ime python3 hpatches_organizer.py
 rm *.tar.gz
 rm -rf hpatches-sequences-release
 rm -rf hpatches_organizer.py
